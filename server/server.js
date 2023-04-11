@@ -1,8 +1,11 @@
-const express = require('express');
-const app = express();
+import  express from 'express'
+import { getLocations } from './database.js'
 
-app.get("/api", (req, res) => {
-  res.json({ "users": ["userOne", "userTwo", "userThree", "userFour"] })
+const app = express()
+
+app.get("/api", async (req, res) => {
+  const locations = await getLocations()
+  res.json(locations)
 })
 
 app.listen(5000, () => {console.log("server started on port 5000")})
