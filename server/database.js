@@ -10,6 +10,14 @@ const pool = mysql.createPool({
 }).promise()
 
 export async function getLocations() {
-    const [rows] = await pool.query('SELECT * FROM locations')
+    const [rows] = await pool.query(`SELECT * FROM locations`)
     return rows
+}
+
+export async function addLocations(world, loc, min, max, founder) {
+    const res = await pool.query(`
+    INSERT INTO locations (world, loc, min, max, founder) 
+    VALUES(?, ?, ?, ?, ?)
+    `,[world, loc, min, max, founder])
+    return res
 }
