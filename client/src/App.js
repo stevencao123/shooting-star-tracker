@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css'
 import React, { useEffect, useState } from 'react'
+import Nav from './components/Nav';
+
 
 function App() {
 
-  const [backend, setBackend] = useState([{}])
-
+  //const [backend, setBackend] = useState([{}])
+  /*
   useEffect(() => {
     fetch("/api").then(
       response => response.json()
@@ -15,18 +17,12 @@ function App() {
       }
     )
   }, [])
+  */
 
   return (
-    <div>
-      {(typeof backend.users === 'undefined') ? (
-        <p>Loading</p>
-      ) : (
-        backend.users.map((user, i) => (
-          <p key={i}>{user}</p>
-        ))
-      )}
-
-    </div>
+    <>
+      <Nav />
+    </>
   )
 }
 
