@@ -1,0 +1,15 @@
+.list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item {
+    display: flex;
+    justify-content: left;
+}
