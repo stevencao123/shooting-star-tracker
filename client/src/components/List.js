@@ -17,10 +17,27 @@ function List() {
     }, [])
 
     return (
-        <div className='list-container'>
-            <ul className='list'>
-                {locations.map(row => (<li className='list-item' key={row.id}>{row.world}, {row.loc}, {moment(row.min).format('YYYY/MM/DD HH:mm')}, {moment(row.max).format('YYYY/MM/DD HH:mm')}, {row.founder}</li>))} 
-            </ul>
+        <div className='table-container'>
+            
+            <table className='table'>
+                <tr>
+                    <th>World</th>
+                    <th>Location</th>
+                    <th>Min</th>
+                    <th>Max</th>
+                    <th>Founded By</th>
+                </tr>
+                {locations.map(row => (
+                    <tr className='table-row' key={row.id}>
+                        <td className='table-item'>{row.world}</td>
+                        <td className='table-item'>{row.loc}</td>
+                        <td className='table-item'>{moment(row.min).format('YYYY/MM/DD HH:mm')}</td>
+                        <td className='table-item'>{moment(row.max).format('YYYY/MM/DD HH:mm')}</td>
+                        <td className='table-item'>{row.founder}</td>
+                    </tr>
+                ))}
+            </table>
+
         </div>
     )
 }

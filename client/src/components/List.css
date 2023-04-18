@@ -1,15 +1,23 @@
-.list-container {
+.table-container {
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.list {
+.table {
     justify-content: center;
     align-items: center;
+    border: 1px solid;
+    background-color: burlywood;
 }
 
-.list-item {
-    display: flex;
-    justify-content: left;
+.table-row {
+    border-bottom: 1px solid;
+}
+
+.table-item {
+    align-items: center;
+    text-align: center;
+    width: 200px;
 }
