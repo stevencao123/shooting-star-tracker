@@ -11,6 +11,7 @@ function App() {
       sx={{
         bgcolor: 'navajowhite', 
         height: '100vh', 
+        width: '100vw',
         alignItems: 'center',
         justifyContent: 'center',
       }}
